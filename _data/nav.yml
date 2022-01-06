@@ -1,8 +1,8 @@
-- title: About
-  url: /about/
+- title: Project
+  url: /
 
-- title: Blog
-  url: /blog/
+- title: Datasets
+  url: /datasets/
 
-- title: Styleguide
-  url: /styleguide/
+- title: Contact
+  url: /contact/
