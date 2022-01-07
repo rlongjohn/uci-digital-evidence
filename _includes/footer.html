@@ -6,6 +6,7 @@
         {% if site.footer.custom != false %}
           <small>{{ site.footer_custom }}</small>
         {% else %}
+          <center><img class="small" src="{{ site.baseurl }}/csafe_logo.png" alt="Photo" loading="lazy"></center>
           <small>Copyright © {{ "now" | date: "%Y" }} {{ site.title }}.</small>
         {% endif %}
         {% if site.footer.credit != false %}
