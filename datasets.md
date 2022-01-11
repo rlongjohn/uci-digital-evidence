@@ -6,6 +6,10 @@ permalink: /datasets/
 
 Below is a list of real-world datasets relevant to digital evidence that are useful for trying out proposed methodologies.
 
+1. [Email communications](#email-communication)
+2. [Mobile app usage](#mobile-app-usage)
+3. [Device location pings](#device-location-pings)
+
 ### Email communications
 
 The email-Eu-core-temporal network dataset comes from the <a href="https://snap.stanford.edu/index.html">Stanford Network Analysis Project</a> and consists of ~300,000 emails sent from October 2003 through May 2005. A row in the dataset is of the form `<sender_id, recipient_id, timestamp>` where the sender and recipient IDs identify the users who sent and received the emails, respectively, and the timestamp is the time at which the email was sent.
