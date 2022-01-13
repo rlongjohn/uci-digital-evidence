@@ -8,7 +8,9 @@ permalink: /team/
 
 * Principal investigator: <a href="https://www.ics.uci.edu/~smyth/">Dr. Padhraic Smyth</a>
 
-* Graduate student researcher: <a href="https://rlongjohn.github.io">Rachel Longjohn</a>
+* Current graduate student researcher: <a href="https://rlongjohn.github.io">Rachel Longjohn</a>
+
+* Former graduate student researcher: <a href="https://www.ics.uci.edu/~galbraic/">Christopher Galbraith</a>
 
 ### Support
 
