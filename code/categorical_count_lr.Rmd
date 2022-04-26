@@ -34,7 +34,20 @@ The multivariate beta function is defined as
 # r1: vector of length K containing the event counts for the known source
 # r2: vector of length K containing the event counts for the unknown source
 #
-calc_lnlr <- function(alpha, r1, r2) {
+calc_lnlr <- function(r1, r2, alpha = NA) {
+  
+  if(length(r1) != length(r2)) {
+    stop("Different K's implied by r1 and r2.")
+  }
+  
+  if (sum(is.na(alpha)) == 0) {
+    alpha <- rep(1, length(r1))
+  } else {
+    if (length(alpha) != length(r1)) {
+      stop("Different K's implied by alpha and r1.")
+    }
+  }
+  
   sum(lgamma(alpha + r1 + r2)) - lgamma(sum(alpha + r1 + r2)) - 
     sum(lgamma(alpha + r1)) + lgamma(sum(alpha + r1)) - 
     sum(lgamma(alpha + r2)) + lgamma(sum(alpha + r2)) + 
@@ -126,7 +139,7 @@ get_lnlr_from_seq <- function(event_seq,
   for(i in 1:length(event_ind)) {
     r1 <- table(event_seq[1:event_ind[i]])
     r2 <- table(event_seq[(event_ind[i] + 1):N])
-    lnlr[i] <- calc_lnlr(alpha, r1, r2)
+    lnlr[i] <- calc_lnlr(r1, r2, alpha)
   }
   
   lnlr
