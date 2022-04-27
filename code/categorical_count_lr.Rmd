@@ -41,11 +41,17 @@ calc_lnlr <- function(r1, r2, alpha = NA) {
   }
   
   if (sum(is.na(alpha)) == 0) {
-    alpha <- rep(1, length(r1))
-  } else {
+    
     if (length(alpha) != length(r1)) {
       stop("Different K's implied by alpha and r1.")
     }
+    
+    if (sum(alpha <= 0) > 0) {
+      stop("All prior parameters need to be greater than 0.")
+    }
+    
+  } else {
+    alpha <- rep(1, length(r1))
   }
   
   sum(lgamma(alpha + r1 + r2)) - lgamma(sum(alpha + r1 + r2)) - 
